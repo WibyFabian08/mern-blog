@@ -14,6 +14,7 @@ const Home = () => {
         <BlogItem></BlogItem>
         <BlogItem></BlogItem>
         <BlogItem></BlogItem>
+        <BlogItem></BlogItem>
       </div>
       <div className='pagination'>
         <Button title='Prev'></Button>

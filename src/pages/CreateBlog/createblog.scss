@@ -1,9 +1,30 @@
-.reate-blog-wrapper {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
+.create-blog-wrapper {
+    padding: 20px;
+    box-sizing: border-box;
 
-    .main-wrapper {
-        flex: 1;
+    .title {
+        padding: 0;
+        margin: 0%;
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    .post-title {
+        font-size: 14px;
+        margin: 0;
+        padding: 0;
+        margin-top: 10px;
+    }
+
+    .preview {
+        max-width: 200px;
+        max-height: 200px;
+        object-fit: cover;
+    }
+
+    .btn-save {
+        max-width: 200px;
+        margin-left: auto;
+        margin-right: 0;
     }
 }

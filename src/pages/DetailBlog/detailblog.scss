@@ -1,0 +1,40 @@
+.detail-wrapper {
+    display: flex;
+    padding: 20px;
+    box-sizing: border-box;
+    flex-direction: column;
+    max-width: 800px;
+    margin: auto;
+
+    .image {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .detail-image {
+            height: 350px;
+            width: 800px;
+            object-fit: cover;
+        }
+
+    }
+
+    .detail-title {
+        font-size: 20px;
+        font-weight: bold;
+        padding: 0;
+        margin: 0;
+        margin-top: 20px;
+    }
+
+    .detail-author {
+        margin: 0;
+        font-size: 12px;
+        color: grey;
+    }
+
+    .detail-body {
+        text-align: justify;
+        font-size: 14px;
+    }
+}

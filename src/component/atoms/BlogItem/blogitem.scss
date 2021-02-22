@@ -5,6 +5,8 @@
     margin-bottom: 15px;
     overflow: hidden;
     margin-right: 15px;
+    height: 350px;
+    box-sizing: border-box;
 
     .thumb-image {
         object-fit: cover;
@@ -17,6 +19,8 @@
         padding-right: 10px;
         padding-bottom: 10px;
         box-sizing: border-box;
+        height: 110px;
+        overflow: hidden;
 
         .title {
             font-size: 16px;
