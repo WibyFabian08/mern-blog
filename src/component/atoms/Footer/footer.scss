@@ -1,0 +1,36 @@
+.footer-wrapper {
+    display: flex;
+    background-color: #67b35c;
+    width: 100%;
+    box-sizing: border-box;
+    height: 100px;
+    align-items: center;
+    justify-content: space-between;
+
+    .poto-wrapper {
+        .poto{
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            line-height: 100px;
+            margin: 0;
+            margin-left: 20px;
+        }
+    }
+
+    .icon-wrapper {
+        margin-right: 20px;
+        
+        .poto{
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            line-height: 100px;
+            margin: 0;
+            margin-left: 10px;
+        }
+    }
+
+    
+
+}
