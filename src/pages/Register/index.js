@@ -8,7 +8,6 @@ const Register = () => {
   return (
     <div className="main-page">
       <div className="bagian-kanan">
-        <h1 className="text-bg">Bagian Kanan</h1>
         <img src={registerBg} className="bg-image"></img>
       </div>
       <div className="bagian-kiri">

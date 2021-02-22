@@ -1,0 +1,25 @@
+.home-wrapper {
+
+    padding-top: 14px;
+    box-sizing: border-box;
+
+    .btn-create {
+        width: 150px;
+        margin-right: 0;
+        margin-left: auto;
+    }
+
+    .content-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .pagination {
+        display: flex;
+        width: 300px;
+        justify-content: space-around;
+        margin: auto;
+        margin-bottom: 20px;
+    }
+}

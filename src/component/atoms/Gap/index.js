@@ -1,7 +1,7 @@
 import React from "react";
 
-const Gap = ({ height }) => {
-  return <div style={{ height: height }}></div>;
+const Gap = ({ height, width }) => {
+  return <div style={{ height: height, width: width }}></div>;
 };
 
 export default Gap;

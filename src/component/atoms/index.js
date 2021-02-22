@@ -3,5 +3,6 @@ import Gap from './Gap';
 import Input from './Input';
 import Header from './Header';
 import Footer from './Footer';
+import BlogItem from './BlogItem';
 
-export {Button, Gap, Input, Header, Footer};
+export {Button, Gap, Input, Header, Footer, BlogItem};
