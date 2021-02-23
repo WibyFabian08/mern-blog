@@ -2,8 +2,12 @@ import React from "react";
 import "./createblog.scss";
 import { Button, Input, TextArea, UploadImage, Gap } from "../../component/atoms";
 import { registerBg } from "../../assets";
+import {useHistory} from 'react-router-dom';
 
 const CreateBlog = () => {
+
+  const history = useHistory();
+
   return (
     <div>
       <div className="create-blog-wrapper">
@@ -20,7 +24,7 @@ const CreateBlog = () => {
         <TextArea></TextArea>
         <Gap height={20}></Gap>
         <div className='btn-save'>
-          <Button title="save"></Button>
+          <Button title="save" onClick={() => history.push('/')}></Button>
         </div>
       </div>
     </div>

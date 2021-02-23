@@ -16,7 +16,6 @@
             width: 800px;
             object-fit: cover;
         }
-
     }
 
     .detail-title {
@@ -36,5 +35,13 @@
     .detail-body {
         text-align: justify;
         font-size: 14px;
+    }
+
+    .detail-back {
+        font-size: 14px;
+        color: gray;
+        text-decoration: underline;
+        cursor: pointer;
+        text-align: center;
     }
 }

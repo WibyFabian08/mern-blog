@@ -1,11 +1,18 @@
 import React from 'react';
 import './header.scss';
-
+import {useHistory} from 'react-router-dom';
 const Header = () => {
+    
+    const history = useHistory();
+
     return (
         <div className='header-wrapper'>
-            <h3 className='title'>Mern Blog</h3>
-            <p className='logout'>Logout</p>
+            <div className='left'>
+                <h3 className='title' onClick={() => history.push('/')}>MERN BLOG</h3>
+            </div>
+            <div className='right'>
+                <p className='logout' onClick={() => history.push('/login')}>Logout</p>
+            </div>
         </div>
     )
 }

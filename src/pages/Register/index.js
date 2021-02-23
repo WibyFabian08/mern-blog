@@ -3,8 +3,12 @@ import "./Register.scss";
 import { registerBg } from "../../assets";
 import {Button, Gap, Input} from '../../component/atoms';
 import {Link} from 'react-router-dom';
+import {useHistory} from 'react-router-dom';
 
 const Register = () => {
+
+  const history = useHistory();
+
   return (
     <div className="main-page">
       <div className="bagian-kanan">
@@ -19,9 +23,9 @@ const Register = () => {
         <Gap height={20}></Gap>
         <Input placeholder="Password" label="Password" type="password"></Input>
         <Gap height={30}></Gap>
-        <Button title='Register'></Button>
+        <Button title='Register' onClick={() => history.push('/login')}></Button>
         <Gap height={70}></Gap>
-        <p className='link'>Sudah Punya Akun? <Link to='/login'>Login</Link></p>
+        <p className='link' onClick={() => history.push('/login')}>Sudah Punya Akun? Login</p>
       </div>
     </div>
   );

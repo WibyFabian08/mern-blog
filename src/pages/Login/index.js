@@ -2,9 +2,12 @@ import React from "react";
 import "../Register/Register.scss";
 import { loginBg } from "../../assets";
 import {Button, Gap, Input} from '../../component/atoms';
-import {Link} from 'react-router-dom';
+import {useHistory} from 'react-router-dom';
 
 const Login = () => {
+
+  const history = useHistory();
+
   return (
     <div className="main-page">
       <div className="bagian-kanan">
@@ -17,9 +20,9 @@ const Login = () => {
         <Gap height={20}></Gap>
         <Input placeholder="Password" label="Password" type="password"></Input>
         <Gap height={30}></Gap>
-        <Button title='Login'></Button>
+        <Button title='Login' onClick={() => history.push('/')}></Button>
         <Gap height={70}></Gap>
-        <p className='link'>Belum Punya Akun? <Link to='/register'>Register</Link></p>
+        <p className='link' onClick={() => history.push('/register')}>Belum Punya Akun? Register</p>
       </div>
     </div>
   );
