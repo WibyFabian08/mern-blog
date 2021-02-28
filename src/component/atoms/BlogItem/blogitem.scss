@@ -7,6 +7,11 @@
     margin-right: 15px;
     box-sizing: border-box;
 
+    &:hover {
+        cursor: pointer;
+        transform: scale(1.01);
+    }
+
     .thumb-image {
         object-fit: cover;
         width: 100%;

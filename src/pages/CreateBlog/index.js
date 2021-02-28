@@ -25,6 +25,8 @@ const CreateBlog = () => {
         <Gap height={20}></Gap>
         <div className='btn-save'>
           <Button title="save" onClick={() => history.push('/')}></Button>
+          <Gap width={20}></Gap>
+          <Button title="Back" onClick={() => history.push('/')}></Button>
         </div>
       </div>
     </div>

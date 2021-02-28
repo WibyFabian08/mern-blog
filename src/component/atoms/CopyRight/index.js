@@ -4,7 +4,7 @@ import './copyright.scss';
 const CopyRight = () => {
     return (
         <div className='wrapper'>
-            <text className='copyright'>CopyRight Wiby Fabian Rianto</text>
+            <text className='copyright'>CopyRight 2021 - Wiby Fabian Rianto</text>
         </div>
     )
 }

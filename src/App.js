@@ -1,10 +1,13 @@
 import React from "react";
+import { Provider } from "react-redux";
 import Routes from './config/Routes';
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import store from './redux/store';
 
 function App() {
   return (
-    <Routes></Routes>
+    <Provider store={store}>
+      <Routes></Routes>
+    </Provider>
   );
 }
 
