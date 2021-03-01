@@ -6,7 +6,7 @@ const setDataBlog = (page) => (dispatch) => {
       .then((result) => {
         const dataBlog = result.data;
 
-        console.log(result.data);
+        // console.log(result.data);
 
         dispatch({
             type: 'SET_DATA_BLOG',
