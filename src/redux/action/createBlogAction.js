@@ -34,3 +34,24 @@ export const sendToAPI = (form) => {
       console.log(err)
     })
 } 
+
+export const updateToAPI = (form, id) => {
+    
+  const data = new FormData();
+  data.append('title', form.title);
+  data.append('body', form.body);
+  data.append('image', form.image);
+
+  axios.put(`http://localhost:4000/v1/blog/post/${id}`, data, {
+    headers: {
+      "Content-Type": "Multipart/Form-Data"
+    }
+  })
+  .then((result) => {
+    console.log(result)
+  })
+  .catch((err) => {
+    console.log('error : ', err)
+  })
+} 
+

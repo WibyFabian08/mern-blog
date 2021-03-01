@@ -1,5 +1,4 @@
 import React from "react";
-import { registerBg } from "../../../assets";
 import Button from "../Button";
 import Gap from "../Gap";
 import "./blogitem.scss";
@@ -14,12 +13,17 @@ const BlogItem = (props) => {
       <div>
         <img className="thumb-image" src={props.image}></img>
         <div className="desc-blog">
-          <p className="title">{props.title}</p>
+          <div className='wadah'>
+            <p className="title">{props.title}</p>
+            <div className='wadah-edit'>
+              <p className='edit' onClick={() => history.push(`/create-blog/${props._id}`)}>Edit</p> | <p className='hapus' onClick={props.onDelete}>Hapus</p>
+            </div>
+          </div>
           <p className="author">{props.name} - {props.date}</p>
           <p className="body">{props.body}</p>
         </div>
         <Gap height={20}></Gap>
-        <Button title="view detail" onClick={() => history.push('/detail-blog')}></Button>
+        <Button title="view detail" onClick={() => history.push(`/detail-blog/${props._id}`)}></Button>
       </div>
     </div>
   );

@@ -26,6 +26,31 @@
         height: 110px;
         overflow: hidden;
 
+        .wadah {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .wadah-edit {
+                display: flex;
+                align-items: center;
+
+                .edit {
+                    color: lightblue;
+                    font-weight: bold;
+                    margin: 0;
+                    margin-right: 14px;
+                }
+
+                .hapus {
+                    color: red;
+                    font-weight: bold;
+                    margin: 0;
+                    margin-left: 14px;
+                }
+            }
+        }
+
         .title {
             font-size: 16px;
             font-weight: bold;

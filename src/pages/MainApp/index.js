@@ -13,10 +13,10 @@ const MainApp = () => {
       <div className="main-wrapper">
         <Router>
           <Switch>
-            <Route path="/create-blog">
+            <Route path="/create-blog/:id?">
               <CreateBlog></CreateBlog>
             </Route>
-            <Route path="/detail-blog">
+            <Route path="/detail-blog/:id">
               <DetailBlog></DetailBlog>
             </Route>
             <Route path="/">

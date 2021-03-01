@@ -3,7 +3,10 @@ import { BlogItem, Button, Gap } from "../../component/atoms";
 import "./home.scss";
 import { useHistory } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { setDataBlog } from "../../redux/action";
+import { setDataBlog, setForm } from "../../redux/action";
+import { confirmAlert } from 'react-confirm-alert';
+import 'react-confirm-alert/src/react-confirm-alert.css';
+import axios from "axios";
 
 const Home = () => {
   const [counter, setCounter] = useState(1);
@@ -29,6 +32,37 @@ const Home = () => {
     );
   };
 
+  const deleteBlogPost = (id) => {
+    confirmAlert({
+      title: 'Konfirmasi Hapus Data',
+      message: 'Yakin Ingin Menghapusnya?',
+      buttons: [
+        {
+          label: 'Ya',
+          onClick: () => {
+            console.log(id);
+            axios.delete(`http://localhost:4000/v1/blog/post/${id}`)
+            .then((result) => {
+              console.log(result);
+              dispatch(setDataBlog(counter));
+            })
+            .catch((err) => {
+              console.log(err);
+            })
+            
+          }
+        },
+        {
+          label: 'Tidak',
+          onClick: () => {
+            console.log("Hapus Dibatalkan")
+          }
+        }
+      ]
+    });
+  }
+
+
   return (
     <div className="home-wrapper">
       <div className="btn-create">
@@ -48,6 +82,8 @@ const Home = () => {
               image={`http://localhost:4000/${data.image}`}
               name={data.author.name}
               date={data.createdAt}
+              _id={data._id}
+              onDelete={() => deleteBlogPost(data._id)}
             ></BlogItem>
           );
         })}
